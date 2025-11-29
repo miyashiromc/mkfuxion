@@ -1,0 +1,207 @@
+ Ir al contenido principal
+Logotipo de Firebase
+Descripción general del proyecto
+Accesos directos a proyectos
+Authentication
+Firestore Database
+Hosting
+Categorías de producto
+Compilación
+Ejecución
+Analytics
+IA
+Herramientas de desarrollo relacionadas
+Firebase Studio
+Plan de facturación:Spark
+Sin costo (USD 0 al mes)
+
+MK FUXION
+Prueba una app de agente de barista potenciada por Firebase AI Logic.
+MK FUXION
+Hola Kushiro
+Te damos la bienvenida a tu proyecto de Firebase
+Gemini te puede sugerir servicios y soluciones de Firebase para tu app
+Próximos pasos con Gemini
+Ver los documentos
+
+Cuéntanos acerca de tu aplicación
+Describe tu app y Gemini te sugerirá productos para ayudarte a comenzar
+
+Agrega estadísticas y supervisión
+Más información sobre los productos de supervisión de Google Analytics y Firebase
+
+Crea un backend
+Firebase ofrece muchos servicios de backend, incluidas opciones de bases de datos SQL y NoSQL. Obtén más información sobre qué servicios podrían ser adecuados para tu app.
+
+Agrega IA a tu app
+Más información para integrar la IA en tu app
+
+Aloja una app web
+Crea e implementa apps web modernas de full stack
+
+Obtén más información sobre las herramientas para desarrolladores de Firebase
+Obtén más información sobre el emulador de Firebase, Firebase CLI y Firebase Studio para crear tu app
+Verificación de aplicaciones, Hosting, Performance Monitoring, Cloud Messaging y Remote Config
+Ir a la documentación
+Agrega Firebase a tu app web
+Completed
+Registrar app
+2
+Agrega el SDK de Firebase
+
+Usar npm
+
+Usar una etiqueta <script>
+Si ya usas npm y un agrupador de módulos como Webpack o Rollup, puedes ejecutar el siguiente comando para instalar la versión más reciente del SDK (más información):
+
+npm install firebase
+Luego, inicializa Firebase y comienza a usar los SDK de los productos que quieres utilizar.
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAY2UO1zdOaMAjsYDHAdCVrYypkRcHnftQ",
+  authDomain: "mk-fuxion.firebaseapp.com",
+  projectId: "mk-fuxion",
+  storageBucket: "mk-fuxion.firebasestorage.app",
+  messagingSenderId: "342364059108",
+  appId: "1:342364059108:web:e673e5d95631a4342903f1",
+  measurementId: "G-51SSGYDC00"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+Nota: Esta opción utiliza el SDK de JavaScript modular, que proporciona un tamaño reducido del SDK.
+
+Obtén más información sobre Firebase para la Web: primeros pasos, referencia de la API del SDK web y muestras
+
+3
+Instala Firebase CLI
+
+
+4
+Realiza la implementación en Firebase Hosting
+
+
+
+
+
+
+
+Skip to content
+Navigation Menu
+miyashiromc
+mkfuxion
+
+Type / to search
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+Owner avatar
+mkfuxion
+Public
+Start coding with Codespaces
+Add a README file and start coding in a secure, configurable, and dedicated development environment.
+
+Add collaborators to this repository
+Search for people using their GitHub username or email address.
+
+Quick setup — if you’ve done this kind of thing before
+or	
+https://github.com/miyashiromc/mkfuxion.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+
+…or create a new repository on the command line
+echo "# mkfuxion" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/miyashiromc/mkfuxion.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/miyashiromc/mkfuxion.git
+git branch -M main
+git push -u origin main
+ ProTip! Use the URL for this page when adding GitHub as a remote.
+Footer
+© 2025 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Community
+Docs
+Contact
+Manage cookies
+Do not share my personal information
+miyashiromc/mkfuxion
+Ir al contenido principal
+Logotipo de Firebase
+Descripción general del proyecto
+Accesos directos a proyectos
+Authentication
+Firestore Database
+Hosting
+Categorías de producto
+Compilación
+Ejecución
+Analytics
+IA
+Herramientas de desarrollo relacionadas
+Firebase Studio
+Plan de facturación:Spark
+Sin costo (USD 0 al mes)
+
+MK FUXION
+Configuración de proyecto
+Configuración de proyecto
+General
+Cloud Messaging
+Integraciones
+Cuentas de servicio
+Privacidad de los datos
+Usuarios y permisos
+Alertas
+Administrar permisos de la cuenta de servicio
+SDK de Firebase Admin
+Credenciales heredadas
+Secretos de la base de datos
+Todas las cuentas de servicio
+2 cuentas de servicio
+SDK de Firebase Admin
+Tu cuenta de servicio de Firebase puede usarse para autenticar de manera programática múltiples funciones de Firebase como Database, Storage y Auth, a través del SDK de Admin unificado. Más información
+
+Cuenta de servicio de Firebase
+firebase-adminsdk-fbsvc@mk-fuxion.iam.gserviceaccount.com
+Fragmento de configuración de SDK de Admin
+
+Node.js
+
+Java
+
+Python
+
+Go
+var admin = require("firebase-admin");
+
+var serviceAccount = require("path/to/serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+Verificación de aplicaciones, Hosting, Performance Monitoring, Cloud Messaging y Remote Config

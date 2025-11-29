@@ -1,0 +1,61 @@
+¡Bacán, Miyako! Eso es pensar en grande y escalar rápido. 😎 Usar **GitHub Actions** para que tu página se actualice sola cada vez que haces un cambio (CI/CD) es nivel "Ninja de la Programación". Te ahorras tener que escribir comandos manuales cada vez que quieras cambiar un precio o una foto.
+
+Aquí tienes el **Prompt de Programación** ajustado para que la IA te dé, no solo el código de la web, sino también el **archivo de configuración de GitHub Actions** y los pasos de seguridad (porque necesitarás una "llave" secreta para que GitHub pueda hablar con Firebase).
+
+Copia y pega esto en tu chat con la IA:
+
+***
+
+**Actúa como un Ingeniero DevOps y Desarrollador Web experto.**
+
+Siguiendo con el proyecto de la página "Link-in-Bio" para "MK Fuxion" (HTML/CSS en Firebase Hosting), ahora quiero automatizar el despliegue (deploy) usando **GitHub Actions**.
+
+**Necesito que me entregues:**
+
+1.  **El código de la web:** (El HTML5 y CSS3 moderno y responsive que te pedí antes, con los botones de WhatsApp, Instagram, TikTok y Facebook).
+2.  **El archivo de Workflow de GitHub (`.yml`):**
+    * Crea un archivo YAML para `.github/workflows/deploy.yml`.
+    * Configúralo para que se dispare (trigger) cada vez que hago un `push` a la rama `main`.
+    * Debe instalar las dependencias necesarias y ejecutar el comando `firebase deploy`.
+    * Usa la acción oficial `FirebaseExtended/action-hosting-deploy` o la que consideres más estable actualmente.
+3.  **Instrucciones de Seguridad (Secretos):**
+    * Explícame claramente cómo obtener la `FIREBASE_SERVICE_ACCOUNT` desde la consola de Google Cloud/Firebase.
+    * Dime dónde pegar esa clave en mi repositorio de GitHub (Settings > Secrets).
+
+**Contexto del Proyecto:**
+* **Rama principal:** `main`
+* **Hosting:** Firebase Hosting
+* **Build command:** No uso framework (es HTML estático), así que no hay paso de `npm run build`, solo copiar archivos.
+
+**Objetivo:** Quiero que cada vez que guarde cambios en GitHub, mi página web se actualice sola en internet en cuestión de segundos.
+
+***
+
+---
+
+### 💡 El "Truco Secreto" de MK Fuxion (Para hacerlo más fácil)
+
+Miyako, aunque el prompt de arriba es genial para entender el código, hay una forma **mucho más rápida** de hacerlo directamente desde tu terminal, donde Firebase y GitHub se configuran casi solos.
+
+Cuando estés en tu carpeta del proyecto (después de crear el `index.html`), ejecuta este comando mágico:
+
+`firebase init hosting:github`
+
+**¿Qué hace este comando?**
+1.  Te pedirá iniciar sesión en GitHub desde el navegador.
+2.  Te preguntará: *"¿En qué repositorio quieres guardar esto?"* (Lo escribes ej: `mi-usuario/mk-fuxion-web`).
+3.  **¡Ojo aquí!** Te preguntará: *"Set up the workflow to run a build script before every deploy?"*. Como tu página es HTML puro (sin React/Vue), responde **NO**.
+4.  Te preguntará: *"Set up automatic deployment to your site's live channel when a PR is merged?"*. Responde **YES**.
+5.  **Lo mejor:** ¡Este comando crea automáticamente el archivo `.yml` y **sube las claves secretas a GitHub por ti**! No tienes que copiar y pegar claves raras manualmente.
+
+### 🚀 Tu Flujo de Trabajo (Workflow) quedará así:
+
+1.  **Mikaela** te pasa una foto nueva o un cambio de texto ("Oye, cambiemos el texto de Detox por 'Reto 5 Días'").
+2.  **Miyako** (Tú) editas el `index.html` en tu compu.
+3.  Abres terminal y escribes 3 comandos:
+    * `git add .`
+    * `git commit -m "Actualizando foto de perfil"`
+    * `git push origin main`
+4.  **GitHub** detecta el cambio, activa el robot (Action) y en 1 minuto tu web en Firebase se actualiza sola. ¡Magia pura, pana! ✨
+
+¿Quieres que te explique cómo estructurar las carpetas en tu compu para que todo esté ordenado desde el día 1?
