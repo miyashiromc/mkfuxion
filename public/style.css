@@ -6,7 +6,8 @@
     --primary-gradient: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
     --whatsapp-color: #25D366;
     --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    --tiktok-color: #000000; /* Or specific gradient */
+    --tiktok-color: #000000;
+    /* Or specific gradient */
     --facebook-color: #1877F2;
     --glass-border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -52,8 +53,13 @@ body {
 }
 
 @keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .container {
@@ -135,7 +141,7 @@ h1 {
     left: var(--x, 0);
     width: 0;
     height: 0;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 100%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
     transform: translate(-50%, -50%);
     transition: width 0.5s, height 0.5s;
     border-radius: 50%;
@@ -150,8 +156,8 @@ h1 {
 .link-card:hover {
     transform: translateY(-2px);
     background: var(--card-hover);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    border-color: rgba(255,255,255,0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .icon-wrapper {
@@ -170,10 +176,28 @@ h1 {
     transform: scale(1.1) rotate(5deg);
 }
 
-.whatsapp .icon-wrapper { color: var(--whatsapp-color); background: rgba(37, 211, 102, 0.1); }
-.instagram .icon-wrapper { background: var(--instagram-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-color: rgba(255,255,255,0.1); }
-.tiktok .icon-wrapper { color: #fff; background: rgba(0,0,0,0.2); text-shadow: 2px 2px 0px #FE2C55, -2px -2px 0px #25F4EE; }
-.facebook .icon-wrapper { color: var(--facebook-color); background: rgba(24, 119, 242, 0.1); }
+.whatsapp .icon-wrapper {
+    color: var(--whatsapp-color);
+    background: rgba(37, 211, 102, 0.1);
+}
+
+.instagram .icon-wrapper {
+    background: var(--instagram-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tiktok .icon-wrapper {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 0px #FE2C55, -2px -2px 0px #25F4EE;
+}
+
+.facebook .icon-wrapper {
+    color: var(--facebook-color);
+    background: rgba(24, 119, 242, 0.1);
+}
 
 .link-card span {
     flex: 1;
@@ -191,6 +215,21 @@ h1 {
     color: #fff;
 }
 
+.video-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    animation: fadeInUp 1s ease-out 0.5s backwards;
+}
+
+.tiktok-embed {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: var(--glass-border);
+}
+
 .footer {
     margin-top: 2rem;
     color: #64748b;
@@ -199,18 +238,37 @@ h1 {
 }
 
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Responsive adjustments */
@@ -218,7 +276,7 @@ h1 {
     .container {
         padding: 1.5rem;
     }
-    
+
     h1 {
         font-size: 1.75rem;
     }
