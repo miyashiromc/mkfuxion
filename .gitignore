@@ -1,0 +1,5 @@
+node_modules/
+.DS_Store
+*.log
+mk-fuxion-firebase-adminsdk-fbsvc-e82e0eaa37.json
+.firebase/
